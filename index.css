@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root {
+    --moradoClaro: rgba(206, 166, 244, 0.669);
+    --moradoOscuro: rgb(154, 75, 228, 0.669);
+    --grisClaro:rgb(198, 192, 204);
+  }
+  header{
+    width: 100%;
+  }
+nav{
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.241);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    width: 100%;
+}
+.nav-left{
+    width: 450px;
+    display: flex;
+}
+.nav-logo{
+    width: 100px;
+}
+.nav-left > ul{
+    display: flex;
+    list-style: none;
+    width: 500px;
+    height: 50px;
+    margin: 27px 0 0 0;
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+
+.nav-left > ul > li > a{
+    text-decoration: none;
+    color: var(--grisClaro);
+    height: 10px;
+    padding: 5px 14px;
+    border-radius: 7px;
+
+}
+
+.nav-left > ul > li > a:hover{
+    color: var(--moradoClaro);
+    border:1px solid var(--moradoOscuro);
+}
+
+.nav-right{
+    width: 260px;
+}
+.nav-right > ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-email{
+    height: 23px;
+    margin: 36px 0 0 0;
+    color: var(--grisClaro);
+    font-size: 15px;
+}
+.nav-right > ul > .nav-bar-shopping-car {
+    width: 40px;
+    margin: 0 0 0 60px;
+    position: relative;
+}
+
+
+.nav-right > ul > .nav-bar-shopping-car >img{
+    width: 40px;
+    margin: 25px 0 0 0;
+
+}
+.nav-right > ul > li> div{
+    background-color: rgb(160, 116, 51);
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 25px;
+    right: -4px;
+}
+
+
+
+
