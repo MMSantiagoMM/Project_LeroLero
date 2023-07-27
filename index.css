@@ -4,12 +4,14 @@
     box-sizing: border-box;
 }
 html{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 :root {
     --moradoClaro: rgba(206, 166, 244, 0.669);
     --moradoOscuro: rgb(154, 75, 228, 0.669);
     --grisClaro:rgb(198, 192, 204);
+    --negro:rgba(0, 0, 0, 0.63);
+    --myAliceBlue:rgba(240, 248, 255, 0.682);
   }
   header{
     width: 100%;
@@ -35,7 +37,7 @@ nav{
     height: 50px;
     margin: 27px 0 0 0;
     padding: 10px 0;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
@@ -66,6 +68,7 @@ nav{
     margin: 36px 0 0 0;
     color: var(--grisClaro);
     font-size: 15px;
+    cursor: pointer;
 }
 .nav-right > ul > .nav-bar-shopping-car {
     width: 40px;
@@ -77,6 +80,7 @@ nav{
 .nav-right > ul > .nav-bar-shopping-car >img{
     width: 40px;
     margin: 25px 0 0 0;
+    cursor: pointer;
 
 }
 .nav-right > ul > li> div{
@@ -88,6 +92,167 @@ nav{
     top: 25px;
     right: -4px;
 }
+.account-email{
+    border: 1px solid var(--grisClaro);
+    position: absolute;
+    right: 130px;
+    top: 94px;
+    width: 140px;
+    height: 160px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+.account-email > ul > li {
+    list-style: none;
+    text-align: center;
+    margin: 8px 0 0 0;
+}
+.account-email > ul > li > a{
+    text-decoration: none;
+}
+.account-email-sign-three{
+    color: var(--moradoClaro);
+}
+.account-email-sign-one,.account-email-sign-two{
+    color: var(--negro);
+    font-size: 20px;
+    font-weight: bold;
+}
+.inactive{
+    display: none;
+}
+
+.myOrder-display{
+    background-color: var(--myAliceBlue);
+    position: absolute;
+    right: 5px;
+    top: 95px;
+    width: 350px;
+    height: 490px;
+    border-radius: 10px;
+}
+.myOrder-display > div {
+    display: flex;
+    align-items: center;
+    margin:  20px 0 0 0;
+}
+.myOrder-display > div > .img-myorder{
+    width: 90px;
+    height: 80px;
+    border-radius: 16px;
+}
+.myOrder-display > div > .parrafo_3{
+    margin: 0 0 0 16px;
+    font-weight: bold;
+}
+.myOrder-display > div > .parrafo_2{
+    margin: 0 0 0 110px;
+}
+.myOrder-display > div > .parrafo_1{
+    margin: 0 0 0 10px;
+}
+.myOrder-display > div > .parrafo_0{
+    margin: 0 0 0 10px;
+    font-weight: bold;
+}
+.myOrder-total{
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: rgba(126, 120, 120, 0.095);
+    font-weight: bold;
+}
+.myOrder-display > div > input{
+    background-color: var(--moradoClaro);
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--myAliceBlue);
+    font-size: 20px;
+}
+.arrow,.img-x{
+    width: 15px;
+}
+
+/* Menu mobile */
+
+@media(min-width:642px){
+    .menu-mobile{
+        display: none;
+    }    
+}
+
+
+@media (max-width: 641px){
+    
+    .menu-mobile > .menu-mobile-icon{
+        width: 45px;
+        margin: 15px 0 0 0;
+    }
+    .menu-mobile > .menu-mobile-display{
+        position: absolute;
+        width:260px;
+        top: 70px;
+        height: 490px;
+        background-color: rgba(240, 248, 255, 0.682);
+        border-radius: 10px;
+    } 
+    .menu-mobile-display > ul > .first-menu{
+        list-style: none;
+        margin: 30px 25px;
+    }
+    .menu-mobile-display > ul > li > a{
+        text-decoration: none;
+        color: var(--negro);
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .menu-mobile-display > ul > .second-menu{
+        list-style: none;
+        margin: 13px 25px;;
+    }
+    .menu-mobile-display > ul > .mobile-email{
+        list-style: none;
+        color: var(--negro);
+        margin: 35px 25px;
+    }
+    .nav-left{
+        display: none;
+    }
+    .navbar-email{
+        display: none;
+    }
+    nav{
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .nav-right > ul{
+        display: flex;
+        justify-content: end;
+    }
+    .nav-right > ul > .nav-bar-shopping-car{
+        margin: 0 0 0 0;
+        bottom: 7px;
+    }
+}
+
+/* Cards con productos */
+
+.cards-container{
+    border:1px solid var(--negro);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,240px);
+    gap: 26px;
+    place-content: center;
+    margin-top: 20px;
+}
+    
+
 
 
 
