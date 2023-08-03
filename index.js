@@ -5,6 +5,9 @@ let myOrderDisplay = document.querySelector(".myOrder-display")
 let menuMobileIcon = document.querySelector(".menu-mobile-icon")
 let menuMobileDisplay = document.querySelector(".menu-mobile-display")
 let cardsContainer = document.querySelector(".cards-container")
+let aside = document.querySelector('aside')
+let btnCloseAside = document.querySelector('.close-aside')
+let mainContainer = document.querySelector('.main-container')
 const productList = [];
 productList.push({
     name: 'Torta',
@@ -59,6 +62,12 @@ function renderProductos(array){
         productCard.appendChild(productInfo)
         cardsContainer.appendChild(productCard)
 
+        productImg.addEventListener('click',()=>{
+            aside.classList.toggle('inactive')
+            accountEmail.classList.add('inactive')
+            myOrderDisplay.classList.add('inactive')
+        })
+
     }
 }
 renderProductos(productList)
@@ -75,16 +84,38 @@ emailDisplay.addEventListener("click",()=>{
         myOrderDisplay.classList.add("inactive")
     }
     accountEmail.classList.toggle("inactive")
+    aside.classList.add('inactive')
     
 })
 shoppingCar.addEventListener("click",()=>{
     let isClose = accountEmail.classList.contains("inactive")
+    let isClosetwo = aside.classList.contains('inactive')
+
     if(!isClose){
         accountEmail.classList.add("inactive")
+    }else{
+        myOrderDisplay.classList.toggle("inactive")
     }
-    myOrderDisplay.classList.toggle("inactive")
+    if(!isClosetwo){
+        aside.classList.add('inactive')
+    }
 }) 
 
 menuMobileIcon.addEventListener("click",()=>{
-    menuMobileDisplay.classList.toggle("inactive")
+    menuMobileDisplay.classList.toggle('inactive')
+    let isClose = menuMobileDisplay.classList.contains('inactive')
+    if(isClose){
+        mainContainer.classList.remove('inactive')
+    }else{
+        mainContainer.classList.add('inactive')
+        myOrderDisplay.classList.add('inactive')
+    }
+
+  
 })
+
+btnCloseAside.addEventListener('click',()=>{
+    aside.classList.add('inactive')
+})
+
+
