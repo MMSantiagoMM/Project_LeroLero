@@ -66,7 +66,47 @@ function renderProductos(array){
             aside.classList.toggle('inactive')
             accountEmail.classList.add('inactive')
             myOrderDisplay.classList.add('inactive')
+
+        
+           /*  
+            let pI = document.createElement('p')
+            pI.classList.add('close-aside')
+            pI.textContent = "X"
+            let imgI = document.createElement('img')
+            imgI = productImg
+            let sectionI = document.createElement('section')
+            sectionI.classList.add('detail-product')
+            let divI = document.createElement('div')
+            divI.classList.add('price-name')
+            let h3I = document.createElement('h3')
+            h3I = productPrice
+            let p2I = document.createElement('p')
+            p2I = productName
+            let div2I = document.createElement('div')
+            div2I.classList.add('description')
+            let p3I = document.createElement('p')
+            p3I.textContent= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequuntur ducimus voluptatum laboriosam hic.'
+            let btnAside = document.createElement('button')
+            btnAside.classList.add('btn-aside')
+            btnAside.textContent = 'Add to car'
+            const imgB = document.createElement('img')
+            imgB.setAttribute('src','./img/shopping-cart.png')
+
+            aside.appendChild(pI)
+            aside.appendChild(imgI)
+            aside.appendChild(sectionI)
+            sectionI.appendChild(divI)
+            divI.appendChild(h3I)
+            divI.appendChild(p2I)
+            sectionI.appendChild(div2I)
+            div2I.appendChild(p3I)
+            sectionI.appendChild(btnAside)
+            btnAside.appendChild(imgB) */
+
+
         })
+
+        
 
     }
 }
@@ -114,8 +154,8 @@ menuMobileIcon.addEventListener("click",()=>{
   
 })
 
-btnCloseAside.addEventListener('click',()=>{
+/* btnCloseAside.addEventListener('click',()=>{
     aside.classList.add('inactive')
-})
+})  */
 
 
