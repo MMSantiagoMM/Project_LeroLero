@@ -25,18 +25,25 @@ productList.push({
     img: '/img/cake.jpg'
 })
 productList.push({
-    name: 'Torta',
+    name: 'Tortica',
     price: 25.000,
     img: '/img/cake.jpg'
 })
 
 function renderProductos(array){
-    for (product of array) {
+    array.forEach(product=> {
         const productCard = document.createElement('div')
         productCard.classList.add('product-card')
 
         const productImg = document.createElement('img')
         productImg.setAttribute('src',product.img)
+        productImg.addEventListener('click',function(){
+            aside.classList.toggle('inactive')
+            accountEmail.classList.add('inactive')
+            myOrderDisplay.classList.add('inactive')
+            renderAside(product)
+
+        })
 
         const productInfo = document.createElement('div')
         productInfo.classList.add('product-info')
@@ -62,54 +69,29 @@ function renderProductos(array){
         productCard.appendChild(productInfo)
         cardsContainer.appendChild(productCard)
 
-        productImg.addEventListener('click',()=>{
-            aside.classList.toggle('inactive')
-            accountEmail.classList.add('inactive')
-            myOrderDisplay.classList.add('inactive')
-
-        
-           /*  
-            let pI = document.createElement('p')
-            pI.classList.add('close-aside')
-            pI.textContent = "X"
-            let imgI = document.createElement('img')
-            imgI = productImg
-            let sectionI = document.createElement('section')
-            sectionI.classList.add('detail-product')
-            let divI = document.createElement('div')
-            divI.classList.add('price-name')
-            let h3I = document.createElement('h3')
-            h3I = productPrice
-            let p2I = document.createElement('p')
-            p2I = productName
-            let div2I = document.createElement('div')
-            div2I.classList.add('description')
-            let p3I = document.createElement('p')
-            p3I.textContent= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequuntur ducimus voluptatum laboriosam hic.'
-            let btnAside = document.createElement('button')
-            btnAside.classList.add('btn-aside')
-            btnAside.textContent = 'Add to car'
-            const imgB = document.createElement('img')
-            imgB.setAttribute('src','./img/shopping-cart.png')
-
-            aside.appendChild(pI)
-            aside.appendChild(imgI)
-            aside.appendChild(sectionI)
-            sectionI.appendChild(divI)
-            divI.appendChild(h3I)
-            divI.appendChild(p2I)
-            sectionI.appendChild(div2I)
-            div2I.appendChild(p3I)
-            sectionI.appendChild(btnAside)
-            btnAside.appendChild(imgB) */
-
-
-        })
+      
 
         
 
     }
+)}
+
+function renderAside(object){
+
+    let imgAside = document.querySelector('.aside-right > img')
+    imgAside.setAttribute('src',object.img)
+
+    let priceAside = document.querySelector('.price-name > h3')
+    priceAside.textContent = '$ '+ object.price
+
+    let nameAside = document.querySelector('.price-name > p')
+    nameAside.textContent = object.name
+
+    btnCloseAside.addEventListener('click',()=>{
+        aside.classList.add('inactive')
+    })
 }
+
 renderProductos(productList)
 
 
