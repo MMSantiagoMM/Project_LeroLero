@@ -268,7 +268,12 @@ nav{
     height: 240px;
     border-radius: 20px;
     object-fit: cover;
+    transition: 0.3s ease;
   }
+  .product-card img:hover{
+    transform: scale(1.05);
+    transition: 0.3s cubic-bezier(0.25, 0.1, 0.1, 1.19);
+}
   .product-info {
     display: flex;
     justify-content: space-between;
@@ -338,6 +343,7 @@ nav{
     right: 1px;
     top: 93px;
     border-radius: 15px;
+
   }
   aside > img {
     width: 100%;
@@ -391,6 +397,8 @@ nav{
   .detail-product > .btn-aside > img{
     width: 30px;
   }
+
+
 
 
 
