@@ -8,26 +8,36 @@ let cardsContainer = document.querySelector(".cards-container")
 let aside = document.querySelector('aside')
 let btnCloseAside = document.querySelector('.close-aside')
 let mainContainer = document.querySelector('.main-container')
+let ShoppingCounter = document.querySelector('.shopping-counter')
+let shoppingNumber = 1;
+
+
+
 const productList = [];
 productList.push({
-    name: 'Torta',
+    name: 'Sweets',
     price: 35.000,
-    img: '/img/cake.jpg'
+    img: '/img/fresh-cakes.webp'
 })
 productList.push({
-    name: 'Pastel',
+    name: 'Little cake',
     price: 55.000,
-    img: '/img/cake.jpg'
+    img: '/img/birthday.webp'
 })
 productList.push({
     name: 'Dulces',
     price: 15.000,
+    img: '/img/best-cookies.webp'
+})
+productList.push({
+    name: 'Black cake',
+    price: 25.000,
     img: '/img/cake.jpg'
 })
 productList.push({
-    name: 'Tortica',
-    price: 25.000,
-    img: '/img/cake.jpg'
+    name: 'Other cake',
+    price: 75.000,
+    img: '/img/rainbow.webp'
 })
 
 function renderProductos(array){
@@ -59,6 +69,12 @@ function renderProductos(array){
         const productInfoFigure = document.createElement('figure')
         const productImgCard = document.createElement('img')
         productImgCard.setAttribute('src', './img/shopping-cart.png')
+        productImgCard.addEventListener('click',()=>{
+            ShoppingCounter.textContent = shoppingNumber++
+
+
+
+        })
 
         productInfoFigure.appendChild(productImgCard)
         productInfoDiv.appendChild(productPrice)
