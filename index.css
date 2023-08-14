@@ -146,6 +146,7 @@ nav{
 .myOrder-display > div > .parrafo_3{
     margin: 0 0 0 16px;
     font-weight: bold;
+    cursor: pointer;
 }
 .myOrder-display > div > .parrafo_2{
     margin: 0 0 0 110px;
